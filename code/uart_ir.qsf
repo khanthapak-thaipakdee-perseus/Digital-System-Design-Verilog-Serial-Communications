@@ -1,0 +1,128 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 23:02:06  February 10, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		uart_ir_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY uart_ir
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:02:06  FEBRUARY 10, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE uart_ir.v
+set_global_assignment -name VERILOG_FILE modules/txcontroller/txcontroller.v
+set_global_assignment -name VERILOG_FILE modules/tx_ir/tx_ir.v
+set_global_assignment -name VERILOG_FILE modules/single_pulser/single_pulser.v
+set_global_assignment -name VERILOG_FILE modules/shift_register/shift_register.v
+set_global_assignment -name VERILOG_FILE modules/seven_seg/sevseg.v
+set_global_assignment -name VERILOG_FILE modules/rxcontroller/rxcontroller.v
+set_global_assignment -name VERILOG_FILE modules/rx_ir/rx_ir.v
+set_global_assignment -name VERILOG_FILE modules/parity_gen/oddparity.v
+set_global_assignment -name VERILOG_FILE modules/parity_check/parity_check.v
+set_global_assignment -name VERILOG_FILE modules/half_signal_selection/half_signal.v
+set_global_assignment -name VERILOG_FILE modules/dflipflop/dflipflop.v
+set_global_assignment -name VERILOG_FILE modules/counter/counter.v
+set_global_assignment -name VERILOG_FILE modules/baud_ir/baud_ir.v
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+set_location_assignment PIN_P23 -to button
+set_location_assignment PIN_N2 -to clk
+set_location_assignment PIN_U17 -to framing_check
+set_location_assignment PIN_AA14 -to parity_check
+set_location_assignment PIN_G26 -to rst
+set_location_assignment PIN_C25 -to rx_in
+set_location_assignment PIN_AE25 -to rx_ir
+set_location_assignment PIN_AE14 -to sel_switch
+set_location_assignment PIN_V13 -to seven_seg0[6]
+set_location_assignment PIN_V14 -to seven_seg0[5]
+set_location_assignment PIN_AE11 -to seven_seg0[4]
+set_location_assignment PIN_AD11 -to seven_seg0[3]
+set_location_assignment PIN_AC12 -to seven_seg0[2]
+set_location_assignment PIN_AB12 -to seven_seg0[1]
+set_location_assignment PIN_AF10 -to seven_seg0[0]
+set_location_assignment PIN_AB24 -to seven_seg1[6]
+set_location_assignment PIN_AA23 -to seven_seg1[5]
+set_location_assignment PIN_AA24 -to seven_seg1[4]
+set_location_assignment PIN_Y22 -to seven_seg1[3]
+set_location_assignment PIN_W21 -to seven_seg1[2]
+set_location_assignment PIN_V21 -to seven_seg1[1]
+set_location_assignment PIN_V20 -to seven_seg1[0]
+set_location_assignment PIN_R3 -to seven_seg5[6]
+set_location_assignment PIN_R4 -to seven_seg5[5]
+set_location_assignment PIN_R5 -to seven_seg5[4]
+set_location_assignment PIN_T9 -to seven_seg5[3]
+set_location_assignment PIN_P7 -to seven_seg5[2]
+set_location_assignment PIN_P6 -to seven_seg5[1]
+set_location_assignment PIN_T2 -to seven_seg5[0]
+set_location_assignment PIN_M4 -to seven_seg6[6]
+set_location_assignment PIN_M5 -to seven_seg6[5]
+set_location_assignment PIN_M3 -to seven_seg6[4]
+set_location_assignment PIN_M2 -to seven_seg6[3]
+set_location_assignment PIN_P3 -to seven_seg6[2]
+set_location_assignment PIN_P4 -to seven_seg6[1]
+set_location_assignment PIN_R2 -to seven_seg6[0]
+set_location_assignment PIN_T7 -to sw[7]
+set_location_assignment PIN_P2 -to sw[6]
+set_location_assignment PIN_P1 -to sw[5]
+set_location_assignment PIN_N1 -to sw[4]
+set_location_assignment PIN_A13 -to sw[3]
+set_location_assignment PIN_B13 -to sw[2]
+set_location_assignment PIN_C13 -to sw[1]
+set_location_assignment PIN_AC13 -to sw[0]
+set_location_assignment PIN_AE24 -to tx_ir
+set_location_assignment PIN_B25 -to tx_out
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name VECTOR_WAVEFORM_FILE uartfull+transmitting.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE uartfull+transmitting_ir.vwf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name VECTOR_WAVEFORM_FILE uartfull+receiving_uart.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/altera/13.0sp1/practice/assignment2_serialcomm/uartfull+receiving_uart.vwf"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
